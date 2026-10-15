@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Compartilhados</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(42, 86, 7);
+        }
+
+        .titulos {
+            color: rgb(135, 230, 163);
+            text-align: center; 
+            font-size: 50px;
+        }
+        .subtitulos{
+            color: rgb(115, 178, 134);
+            text-align: center; 
+            font-size: 30px;
+        }
+        .paragrafo{
+            color: wheat;
+            text-align: center;
+            font-size: 20px;
+
+        }
+        .fundo_verde {
+            background-color: rgb(14, 132, 3);
+            text-align: center;
+        }
+        .texto{
+            color: rgb(178, 169, 169);
+            text-align: left;
+            font-size: 20px;
+        }
+        .fundo_2{
+            background-color: rgb(40, 60, 23);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="fundo_verde">
+            <hr>
+            <br>
+            <h1 class="titulos">Seletores Compartilhados</h1>
+            <img src="https://hermes.dio.me/articles/cover/9771699c-9db6-41fc-830e-01640308091d.png" width="200" alt="">
+            <br><br>
+            <hr>
+        </nav>
+    </header>
+    <main>
+        <nav class="">
+            <br><br><br><br>
+            <h2 class="titulos">Seletor de Atributo</h2>
+            <br>
+            <h4 class="subtitulos">O que é?</h4>
+            <p class="paragrafo">O seletor de atributo no CSS é
+                 uma ferramenta usada para encontrar e estilizar elementos HTML com base na presença, 
+                no valor ou em partes do valor de um atributo específico.</p>
+            <br>
+            <h4 class="subtitulos">Qual sua utilização?</h4>
+            <p class="paragrafo"> Aplicar um estilo diferente em links que abrem em outra aba (target="_blank") ou que apontam para arquivos PDF.</p>
+            <br>
+            <h4 class="subtitulos">Exemplo:</h4>
+            <br>
+            <pre class="texto">
+                <code>/* Estilo para links que abrem em nova aba */
+                a[target="_blank"] {
+                 color: red;
+                }
+
+                /* Estilo para links de arquivos PDF */
+                a[href$=".pdf"] {
+                color: green;
+                font-weight: bold;
+                }</code>
+            </pre>
+        </nav>
+        <hr>
+        <nav class="fundo_2">
+            <br><br><br><br>
+            <h2 class="titulos">Seletor Descendente</h2>
+            <br>
+            <h4 class="subtitulos">O que é?</h4>
+            <p class="paragrafo">O seletor descendente em CSS é um combinador representado por um espaço em branco ( ) entre dois ou mais seletores. Ele serve para selecionar um elemento que esteja contido (em qualquer nível de profundidade) dentro de um elemento ancestral específico.</p>
+            <br>
+            <h4 class="subtitulos">Qual sua utilização?</h4>
+            <p class="paragrafo"> Estilizar todos os links (< a >) que estão dentro de um rodapé (footer) ou menu (nav).</p>
+            <br>
+            <h4 class="subtitulos">Exemplo:</h4>
+            <br>
+            <pre class="texto">
+            <code>
+            /* Seleciona todos os < p > que são descendentes de um elemento com a classe .caixa */
+            .caixa p {
+            color: blue;
+            font-size: 16px;
+            }</code>
+            </pre>
+        </nav>
+        <hr>
+        <nav class="">
+            <br><br><br><br>
+            <h2 class="titulos">Seletor Filho Direto</h2>
+            <br>
+            <h4 class="subtitulos">O que é?</h4>
+            <p class="paragrafo">O seletor de filho direto (representado pelo símbolo >) em CSS é um recurso utilizado para selecionar apenas os elementos que são filhos imediatos de um elemento pai. Isso significa que ele ignora elementos que estão aninhados mais profundamente na estrutura (como netos ou bisnetos).</p>
+            <br>
+            <h4 class="subtitulos">Qual sua utilização?</h4>
+            <p class="paragrafo">Sua principal utilização é garantir a aplicação de estilos de forma específica e controlada, evitando que regras de CSS "vazem" e afetem submenus, listas aninhadas ou outras estruturas internas parecidas.</p>
+            <br>
+            <h4 class="subtitulos">Exemplo:</h4>
+            <br>
+            <pre class="texto">
+            <code>
+                /* Seleciona apenas os < li > que são filhos diretos de .menu-principal */
+                .menu-principal > li {
+                color: blue;
+                font-weight: bold;
+                }
+            </code>
+            </pre>
+        </nav>
+        <hr>
+        <nav class="fundo_2">
+            <br><br><br><br>
+            <h2 class="titulos">Seletor de Irmãos Gerais</h2>
+            <br>
+            <h4 class="subtitulos">O que é?</h4>
+            <p class="paragrafo">Seletor de Irmãos Gerais (representado pelo caractere til ~ em CSS) é um combinador que seleciona todos os elementos que compartilham o mesmo elemento pai e aparecem depois de um elemento especificado.</p>
+            <br>
+            <h4 class="subtitulos">Qual sua utilização?</h4>
+            <p class="paragrafo"> É usado quando você precisa aplicar um estilo a todos os elementos de um mesmo nível que vêm após um marco inicial (como um título ou um botão), e não apenas ao primeiro.</p>
+            <br>
+            <h4 class="subtitulos">Exemplo:</h4>
+            <br>
+            <pre class="texto">
+            <code>
+                h2 ~ p {
+                color: green;
+                font-weight: bold;
+                }   
+            </code>
+            </pre>
+        </nav>
+        <hr>
+        <nav class="">
+            <br><br><br><br>
+            <h2 class="titulos">Seletor de Pseudoclasse</h2>
+            <br>
+            <h4 class="subtitulos">O que é?</h4>
+            <p class="paragrafo">Um Seletor de Pseudoclasse em CSS é uma palavra-chave adicionada a um seletor que especifica um estado especial do elemento selecionado.</p>
+            <br>
+            <h4 class="subtitulos">Qual sua utilização?</h4>
+            <p class="paragrafo">Ele permite aplicar estilos a um elemento não apenas com base na sua estrutura na árvore do documento, mas também com base em fatores externos, como o comportamento do usuário, o histórico de navegação ou o estado de um elemento de formulário.</p>
+            <br>
+            <h4 class="subtitulos">Exemplo:</h4>
+            <br>
+            <pre class="texto">
+            <code>
+                seletor:pseudoclasse {
+                propriedade: valor;
+                }
+            </code>
+            </pre>
+        </nav>
+        <hr>
+        <nav class="fundo_2">
+            <br><br><br><br>
+            <h2 class="titulos">Seletor de Pseudoelemento</h2>
+            <br>
+            <h4 class="subtitulos">O que é?</h4>
+            <p class="paragrafo">O seletor de pseudoelemento em CSS é uma palavra-chave adicionada a um seletor que permite estilizar partes específicas do HTML que não existem como nós separados na árvore do documento.</p>
+            <br>
+            <h4 class="subtitulos">Qual sua utilização?</h4>
+            <p class="paragrafo">Eles são amplamente utilizados para inserir conteúdo decorativo, estilizar a primeira letra ou linha de um texto, ou customizar elementos de formulários sem a necessidade de poluir o código com tags HTML extras.</p>
+            <br>
+            <h4 class="subtitulos">Exemplo:</h4>
+            <br>
+            <pre class="texto">
+            <code>
+                seletor::pseudoelemento {
+                propriedade: valor;
+                }
+            </code>
+            </pre>
+        </nav>
+        <hr>
+    </main>
+</body>
+</html>
